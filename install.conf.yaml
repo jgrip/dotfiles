@@ -1,3 +1,22 @@
-- clean: []
-- link: {}
-- shell: []
+---
+-
+  clean:
+      - "~"
+-
+  link:
+      ~/.fonts: fonts
+      ~/.gitconfig: gitconfig
+      ~/.vim: vim/vim
+      ~/.vimrc: vim/vimrc
+      ~/.zshrc: zshrc
+      ~/.kde/share/apps/konsole/Shell.profile:
+       create: true
+       path: kde/apps/konsole/Shell.profile
+-
+  shell:
+       -
+         - "gcc -O3 -o bin/powerline github/powerline/client/powerline.c"
+         - "Compiling powerline client"
+       -
+         - "github/YouCompleteMe/install.sh"
+         - "Compiling YouCompleteMe client"
