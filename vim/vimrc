@@ -132,7 +132,6 @@ execute pathogen#infect()
     endif
 
     set tabpagemax=15               " Only show 15 tabs
-    set showmode                    " Display the current mode
 
     set cursorline                  " Highlight current line
 
@@ -147,17 +146,9 @@ execute pathogen#infect()
                                     " Selected characters/lines in visual mode
     endif
 
-    if has('statusline')
-        set laststatus=2
-
-        " Broken down into easily includeable segments
-        "set statusline=%<%f\                     " Filename
-        "set statusline+=%w%h%m%r                 " Options
-        "set statusline+=%{fugitive#statusline()} " Git Hotness
-        "set statusline+=\ [%{&ff}/%Y]            " Filetype
-        "set statusline+=\ [%{getcwd()}]          " Current dir
-        "set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-    endif
+    set laststatus=2
+    set showtabline=2 " Always display the tabline, even if there is only one tab
+    set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
     set backspace=indent,eol,start  " Backspace for dummies
     set linespace=0                 " No extra spaces between rows
