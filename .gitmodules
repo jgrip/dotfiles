@@ -2,7 +2,7 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 [submodule "antigen"]
-	path = antigen
+	path = github/antigen
 	url = https://github.com/zsh-users/antigen
 [submodule "fonts"]
 	path = github/powerline-fonts
