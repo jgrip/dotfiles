@@ -5,7 +5,7 @@
 	path = antigen
 	url = https://github.com/zsh-users/antigen
 [submodule "fonts"]
-	path = fonts
+	path = github/powerline-fonts
 	url = https://github.com/powerline/fonts
 [submodule "github/vim-pathogen"]
 	path = github/vim-pathogen
