@@ -236,6 +236,13 @@ execute pathogen#infect()
         endif
     endfunction
 
+    "the following simply creates an ambiguous mapping so vim fully
+    ""processes the escape sequence for terminal keys, see 'ttimeout' for a
+    "rough explanation, this just forces it to work
+    if &term[:4] == "xterm" || &term[:5] == 'screen' || &term[:3] == 'rxvt'
+      inoremap <silent> <C-[>OC <RIGHT>
+    endif
+
     " Map g* keys in Normal, Operator-pending, and Visual+select
     noremap $ :call WrapRelativeMotion("$")<CR>
     noremap <End> :call WrapRelativeMotion("$")<CR>
