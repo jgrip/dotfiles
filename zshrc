@@ -1,4 +1,4 @@
-source ~/dotfiles/guthub/antigen/antigen.zsh
+source ~/dotfiles/github/antigen/antigen.zsh
 
 # Bootstrap path
 export PATH=~/dotfiles/bin:${PATH}
