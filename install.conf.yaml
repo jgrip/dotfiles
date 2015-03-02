@@ -13,6 +13,9 @@
       ~/.kde/share/apps/konsole/Shell.profile:
        create: true
        path: kde/apps/konsole/Shell.profile
+      ~/.config/powerline/themes/shell/default.json:
+       create: true
+       path: config/powerline/themes/shell/default.json
 -
   shell:
        -
