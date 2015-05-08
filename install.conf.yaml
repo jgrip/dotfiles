@@ -19,8 +19,5 @@
 -
   shell:
        -
-         - "gcc -O3 -o bin/powerline github/powerline/client/powerline.c"
-         - "Compiling powerline client"
-       -
          - "installscripts/buildycm.sh"
          - "Compiling YouCompleteMe client"

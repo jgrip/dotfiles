@@ -28,9 +28,6 @@
 [submodule "github/ctrlp.vim"]
 	path = github/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim
-[submodule "github/powerline"]
-	path = github/powerline
-	url = https://github.com/powerline/powerline
 [submodule "github/vim-bufferline"]
 	path = github/vim-bufferline
 	url = https://github.com/bling/vim-bufferline
@@ -100,3 +97,6 @@
 [submodule "github/numbers.vim"]
 	path = github/numbers.vim
 	url = https://github.com/myusuf3/numbers.vim
+[submodule "github/vim-airline"]
+	path = github/vim-airline
+	url = https://github.com/bling/vim-airline.git
