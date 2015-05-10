@@ -67,9 +67,6 @@
 [submodule "github/tabular"]
 	path = github/tabular
 	url = https://github.com/godlygeek/tabular
-[submodule "github/ultisnips"]
-	path = github/ultisnips
-	url = https://github.com/SirVer/ultisnips
 [submodule "github/vim-snippets"]
 	path = github/vim-snippets
 	url = https://github.com/honza/vim-snippets
