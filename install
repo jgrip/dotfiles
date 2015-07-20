@@ -8,7 +8,19 @@ DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+echo "** Installing dotbot"
+
 cd "${BASEDIR}"
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
+echo "** Running dotbot install"
+
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+
+echo "** Fetching github submodules"
+
+git submodule update --init --recursive github
+
+echo "** Installing vim plugins"
+
+vim -c PlugInstall -c exit -c exit
