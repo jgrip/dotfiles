@@ -21,6 +21,9 @@ endfunction
 "" plugins
 "===============================================================================
 
+" Basics
+Plug 'tpope/vim-sensible'
+
 " Code completion
 " NeoBundle'Shougo/neocomplcache'
 " NeoBundle 'vim-scripts/AutoComplPop'
@@ -67,23 +70,43 @@ call plug#end()
 "" Settings
 "===============================================================================
 
-""" Syntax highlighting
-syntax on
-
 """ Colour scheme
 set background=dark
 colorscheme solarized
 
-""" Airline
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enbled = 1
-let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline#extensions#tabline#fnamecollapse = 0
-let g:airline#extensions#virtualenv#enabled = 1
-let g:airline#extensions#tmuxline#enabled = 0
-let g:airline_inactive_collapse = 0
-let g:virtualenv_auto_activate = 1
-set laststatus=2
+""" Basics
+set shortmess+=aoOtT	" Clean up messages
+set virtualedit=onemore	" Go beyond end of line
+set nospell		" No spellchecking
+set hidden		" Buffer switching without saving
+set cursorline		" Highlight current line
+set showtabline=2	" Always show tabs
+set noshowmode		" Don't show mode
+
+set showmatch
+set hlsearch
+set ignorecase
+set smartcase
+
+set nowrap
+set shiftwidth=4
+set expandtab
+set tabstop=4
+set softtabstop=4
+set nojoinspaces
+
+set pastetoggle=<F12>
+
+""" Key remaps
+" Use space as leader
+let mapleader = ' '
+let maplocalleader = ' '
+
+" clean search highlights
+nmap <silent> <leader>/ :set invhlsearch<CR>
+
+" For when you didn't sudo like a boss of n00bs
+cmap w!! w !sudo tee % >/dev/null
 
 """ Splits
 set splitright
@@ -97,6 +120,25 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 
 
+"===============================================================================
+"" Plugin Settings
+"===============================================================================
+
+""" Airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enbled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#fnamecollapse = 0
+let g:airline#extensions#virtualenv#enabled = 1
+let g:airline#extensions#tmuxline#enabled = 0
+let g:airline_inactive_collapse = 0
+let g:virtualenv_auto_activate = 1
+set laststatus=2
+
+""" NerdTree
+inoremap <C-e> <esc>:NERDTreeToggle<CR>
+nnoremap <C-e> :NERDTreeToggle<CR>
+let NerdTreeIgnore=['\.py[cd]$','\~$']
 
 "===============================================================================
 "" External stuff
