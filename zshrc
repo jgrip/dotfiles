@@ -29,4 +29,7 @@ export PATH=~/dotfiles/bin:${PATH}
 export DEBEMAIL=ogun@ogun.org
 export DEBFULLNAME=Johan Grip
 
+# Terminal settings
+export TERM=xterm-256color
+[ -n "$TMUX" ] && export TERM=screen-256color
 

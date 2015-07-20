@@ -38,7 +38,7 @@ endfunction
 " Plug 'scrooloose/nerdcommenter'
 
 " File browsing
-" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " File types
 
@@ -57,6 +57,7 @@ Plug 'edkolev/promptline.vim'
 Plug 'altercation/vim-colors-solarized'
 
 " Misc
+Plug 'christoomey/vim-tmux-navigator'
 
 "" End of plugin section
 call plug#end()
@@ -66,14 +67,14 @@ call plug#end()
 "" Settings
 "===============================================================================
 
-" Syntax highlighting
+""" Syntax highlighting
 syntax on
 
-" Colour scheme
+""" Colour scheme
 set background=dark
 colorscheme solarized
 
-" Airline
+""" Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enbled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
@@ -84,12 +85,25 @@ let g:airline_inactive_collapse = 0
 let g:virtualenv_auto_activate = 1
 set laststatus=2
 
+""" Splits
+set splitright
+set splitbelow
+
+""" Motions
+" Ctrl-jkhl for split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+
+
+
 "===============================================================================
 "" External stuff
 "===============================================================================
 
-" tmuxline config
+""" tmuxline config
 let g:tmuxline_theme = 'airline'
 
-" promptline config
+""" promptline config
 let g:promptline_theme = 'airline'
