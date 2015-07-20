@@ -1,4 +1,26 @@
-source ~/dotfiles/github/antigen/antigen.zsh
+source ~/dotfiles/github/zgen/zgen.zsh
+
+# Check if no init script
+if ! zgen saved; then
+	echo "Creating zgen save"
+
+	zgen oh-my-zsh
+
+	#Plugins
+	#zgen oh-my-zsh plugins/git
+	#zgen oh-my-zsh plugins/sudo
+	#zgen oh-my-zsh plugins/command-not-found
+
+	#Completions
+
+	#Themes
+
+	#Save 
+	zgen save
+fi
+
+# Load promptline
+source ~/dotfiles/zsh/promptline-snapshot
 
 # Bootstrap path
 export PATH=~/dotfiles/bin:${PATH}
@@ -7,19 +29,4 @@ export PATH=~/dotfiles/bin:${PATH}
 export DEBEMAIL=ogun@ogun.org
 export DEBFULLNAME=Johan Grip
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
-#
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle pip
-antigen bundle command-not-found
-#
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
-#
-# Load the theme.
-antigen bundle nojhan/liquidprompt
-#
-# Tell antigen that you're done.
-antigen apply
+
