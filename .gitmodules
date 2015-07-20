@@ -1,99 +1,12 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "antigen"]
-	path = github/antigen
-	url = https://github.com/zsh-users/antigen
 [submodule "fonts"]
 	path = github/powerline-fonts
 	url = https://github.com/powerline/fonts
-[submodule "github/vim-pathogen"]
-	path = github/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen
-[submodule "github/nerdtree"]
-	path = github/nerdtree
-	url = https://github.com/scrooloose/nerdtree
-[submodule "github/vim-colors-solarized"]
-	path = github/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized
-[submodule "github/vim-surround"]
-	path = github/vim-surround
-	url = https://github.com/tpope/vim-surround
-[submodule "github/vim-fugitive"]
-	path = github/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule "github/vim-repeat"]
-	path = github/vim-repeat
-	url = https://github.com/tpope/vim-repeat
-[submodule "github/ctrlp.vim"]
-	path = github/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim
-[submodule "github/vim-bufferline"]
-	path = github/vim-bufferline
-	url = https://github.com/bling/vim-bufferline
-[submodule "github/vim-easymotion"]
-	path = github/vim-easymotion
-	url = https://github.com/Lokaltog/vim-easymotion
-[submodule "github/vim-nerdtree-tabs"]
-	path = github/vim-nerdtree-tabs
-	url = https://github.com/jistr/vim-nerdtree-tabs
-[submodule "github/undotree"]
-	path = github/undotree
-	url = https://github.com/mbbill/undotree
-[submodule "github/restore_view.vim"]
-	path = github/restore_view.vim
-	url = https://github.com/vim-scripts/restore_view.vim
-[submodule "github/vim-indent-guides"]
-	path = github/vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides
-[submodule "github/vim-abolish"]
-	path = github/vim-abolish
-	url = https://github.com/tpope/vim-abolish.git
-[submodule "github/vim-over"]
-	path = github/vim-over
-	url = https://github.com/osyo-manga/vim-over
-[submodule "github/wildfire.vim"]
-	path = github/wildfire.vim
-	url = https://github.com/gcmt/wildfire.vim
-[submodule "github/syntastic"]
-	path = github/syntastic
-	url = https://github.com/scrooloose/syntastic
-[submodule "github/nerdcommenter"]
-	path = github/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter
 [submodule "github/vim-commentary"]
 	path = github/vim-commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule "github/tabular"]
-	path = github/tabular
-	url = https://github.com/godlygeek/tabular
-[submodule "github/vim-snippets"]
-	path = github/vim-snippets
-	url = https://github.com/honza/vim-snippets
-[submodule "github/python-mode"]
-	path = github/python-mode
-	url = https://github.com/klen/python-mode
-[submodule "github/YouCompleteMe"]
-	path = github/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe
-[submodule "github/python.vim"]
-	path = github/python.vim
-	url = https://github.com/yssource/python.vim
-[submodule "github/HTML-AutoCloseTag"]
-	path = github/HTML-AutoCloseTag
-	url = https://github.com/amirh/HTML-AutoCloseTag
-[submodule "github/vim-css3-syntax"]
-	path = github/vim-css3-syntax
-	url = https://github.com/hail2u/vim-css3-syntax
-[submodule "github/vim-coloresque"]
-	path = github/vim-coloresque
-	url = https://github.com/gorodinskiy/vim-coloresque
-[submodule "github/vim-haml"]
-	path = github/vim-haml
-	url = https://github.com/tpope/vim-haml
-[submodule "github/numbers.vim"]
-	path = github/numbers.vim
-	url = https://github.com/myusuf3/numbers.vim
-[submodule "github/vim-airline"]
-	path = github/vim-airline
-	url = https://github.com/bling/vim-airline.git
+[submodule "github/vim-plug"]
+	path = github/vim-plug
+	url = https://github.com/junegunn/vim-plug.git
