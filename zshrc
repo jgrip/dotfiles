@@ -25,6 +25,8 @@ source ~/dotfiles/zsh/promptline-snapshot
 # Bootstrap path
 export PATH=~/dotfiles/bin:${PATH}
 
+[ -d ~/bin ] && export PATH=~/bin:${PATH}
+
 # Debian settings
 export DEBEMAIL=ogun@ogun.org
 export DEBFULLNAME=Johan Grip
@@ -33,3 +35,5 @@ export DEBFULLNAME=Johan Grip
 export TERM=xterm-256color
 [ -n "$TMUX" ] && export TERM=screen-256color
 
+# Load local settings
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
