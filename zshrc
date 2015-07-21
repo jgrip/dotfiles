@@ -11,6 +11,10 @@ if ! zgen saved; then
 	#zgen oh-my-zsh plugins/sudo
 	#zgen oh-my-zsh plugins/command-not-found
 
+    #Highlight and suggestions
+    zgen load zsh-users/zsh-syntax-highlighting
+    zgen load tarruda/zsh-autosuggestions
+
 	#Completions
 
 	#Themes
@@ -18,6 +22,12 @@ if ! zgen saved; then
 	#Save 
 	zgen save
 fi
+
+# Enable auto suggestions
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
 
 # Load promptline
 source ~/dotfiles/zsh/promptline-snapshot
