@@ -13,7 +13,7 @@ if ! zgen saved; then
 
     #Highlight and suggestions
     zgen load zsh-users/zsh-syntax-highlighting
-    zgen load tarruda/zsh-autosuggestions
+    #zgen load tarruda/zsh-autosuggestions
 
 	#Completions
 
@@ -24,13 +24,17 @@ if ! zgen saved; then
 fi
 
 # Enable auto suggestions
-zle-line-init() {
-    zle autosuggest-start
-}
-zle -N zle-line-init
+#zle-line-init() {
+#    zle autosuggest-start
+#}
+#zle -N zle-line-init
 
 # Load promptline
-source ~/dotfiles/zsh/promptline-snapshot
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    source ~/dotfiles/zsh/promptline-snapshot-ssh
+else
+    source ~/dotfiles/zsh/promptline-snapshot
+fi
 
 # Bootstrap path
 export PATH=~/dotfiles/bin:${PATH}
