@@ -77,16 +77,26 @@ colorscheme solarized
 """ Basics
 set shortmess+=aoOtT	" Clean up messages
 set virtualedit=onemore	" Go beyond end of line
-set nospell		" No spellchecking
-set hidden		" Buffer switching without saving
-set cursorline		" Highlight current line
-set showtabline=2	" Always show tabs
-set noshowmode		" Don't show mode
+set nospell		        " No spellchecking
+set hidden		        " Buffer switching without saving
+set cursorline		    " Highlight current line
+set showtabline=2	    " Always show tabs
+set noshowmode		    " Don't show mode
+set modelines=0         " I don't use modelines
+set scrolloff=3         " Keep three lines on screen
+set relativenumber      " Line numbers relative to cursor
+set virtualedit=block   " Allow visualmode to go beyond line length
 
-set showmatch
-set hlsearch
-set ignorecase
-set smartcase
+set incsearch           " Incremental search highlighting
+set showmatch           " Show matching braces
+set hlsearch            " Highlight searches
+
+set ignorecase          " Ignore case in searches
+set smartcase           " Unless one is a capital
+set gdefault            " When replacing, always replace all occurences (append g to disable)
+
+nnoremap / /\v          " Use normal syntax regexp, not weird vim
+vnoremap / /\v          " Use normal syntax regexp, not weird vim
 
 set nowrap
 set shiftwidth=4
@@ -96,6 +106,8 @@ set softtabstop=4
 set nojoinspaces
 
 set pastetoggle=<F12>
+
+set synmaxcol=1024      " Don't do syntax colouring for long lines
 
 """ Key remaps
 " Use space as leader

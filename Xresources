@@ -6,7 +6,6 @@ URxvt*italicFont: xft:DejaVu Sans Mono for Powerline:italic:size=9
 URxvt*boldItalicFont: xft:DejaVu Sans Mono for Powerline:bold:italic:size=9
 
 URxvt.internalBorder: 3
-URxvt*letterSpace: -1
 ! Scrollbar
 URxvt.scrollStyle: rxvt
 URxvt.scrollBar: false
