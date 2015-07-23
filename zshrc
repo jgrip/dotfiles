@@ -49,5 +49,8 @@ export DEBFULLNAME=Johan Grip
 export TERM=xterm-256color
 [ -n "$TMUX" ] && export TERM=screen-256color
 
+# MC skin
+export MC_SKIN=~/dotfiles/github/mc-solarized-skin/solarized.ini
+
 # Load local settings
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

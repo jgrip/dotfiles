@@ -13,3 +13,6 @@
 [submodule "github/zgen"]
 	path = github/zgen
 	url = https://github.com/tarjoilija/zgen.git
+[submodule "github/mc-solarized-skin"]
+	path = github/mc-solarized-skin
+	url = https://github.com/pavlo/mc-solarized-skin.git
