@@ -11,11 +11,10 @@ if ! zgen saved; then
 	#zgen oh-my-zsh plugins/sudo
 	#zgen oh-my-zsh plugins/command-not-found
 
+	#Completions
+    
     #Highlight and suggestions
     zgen load zsh-users/zsh-syntax-highlighting
-    #zgen load tarruda/zsh-autosuggestions
-
-	#Completions
 
 	#Themes
 
@@ -51,6 +50,10 @@ export TERM=xterm-256color
 
 # MC skin
 export MC_SKIN=~/dotfiles/github/mc-solarized-skin/solarized.ini
+
+# Aliases
+alias gfo='git fetch origin'
+alias gmom='git merge origin/master'
 
 # Load local settings
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

@@ -6,7 +6,6 @@ set nocompatible
 "===============================================================================
 call plug#begin('~/.vim/plugged')
 
-
 "===============================================================================
 "" pre-plugin stuff
 "===============================================================================
@@ -25,17 +24,17 @@ endfunction
 Plug 'tpope/vim-sensible'
 
 " Code completion
-" NeoBundle'Shougo/neocomplcache'
-" NeoBundle 'vim-scripts/AutoComplPop'
+" Plug 'Shougo/neocomplcache'
+" Plug 'Shougo/neocomplete.vim'
 " Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-" NeoBundle 'Shougo/neocomplete.vim'
-" NeoBundle 'wellle/tmux-complete.vim'
+" Plug 'vim-scripts/AutoComplPop'
+" Plug 'wellle/tmux-complete.vim'
 
 " Snippets
-" NeoBundle 'Shougo/neosnippet'
-" NeoBundle 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
+" Plug 'JazzCore/neocomplcache-ultisnips'
+" Plug 'Shougo/neosnippet'
 " Plug 'SirVer/ultisnips'
-" NeoBundle 'JazzCore/neocomplcache-ultisnips'
 
 " Comments
 " Plug 'scrooloose/nerdcommenter'
@@ -45,6 +44,9 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " File types
 
+" Python
+Plug 'davidhalter/jedi-vim'
+
 " Git
 
 " Motions
@@ -53,8 +55,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Status lines
 Plug 'bling/vim-airline'
-Plug 'edkolev/tmuxline.vim'
 Plug 'edkolev/promptline.vim'
+Plug 'edkolev/tmuxline.vim'
 
 " Colour schemes
 Plug 'altercation/vim-colors-solarized'
@@ -72,7 +74,10 @@ call plug#end()
 
 """ Colour scheme
 set background=dark
-colorscheme solarized
+try
+  colorscheme solarized
+catch
+endtry
 
 """ Basics
 set shortmess+=aoOtT	" Clean up messages
@@ -84,19 +89,24 @@ set showtabline=2	    " Always show tabs
 set noshowmode		    " Don't show mode
 set modelines=0         " I don't use modelines
 set scrolloff=3         " Keep three lines on screen
-set relativenumber      " Line numbers relative to cursor
+if exists("+relativenumber")
+  set relativenumber      " Line numbers relative to cursor
+endif
+set number              " Except for current line
 set virtualedit=block   " Allow visualmode to go beyond line length
 
 set incsearch           " Incremental search highlighting
-set showmatch           " Show matching braces
+set showmatch           " Show matching brackets
 set hlsearch            " Highlight searches
 
 set ignorecase          " Ignore case in searches
 set smartcase           " Unless one is a capital
 set gdefault            " When replacing, always replace all occurences (append g to disable)
+set showcmd             " Show commands when typing them
 
-nnoremap / /\v          " Use normal syntax regexp, not weird vim
-vnoremap / /\v          " Use normal syntax regexp, not weird vim
+" Use normal regex syntax, not vim
+nnoremap / /\v
+vnoremap / /\v
 
 set nowrap
 set shiftwidth=4
@@ -108,6 +118,16 @@ set nojoinspaces
 set pastetoggle=<F12>
 
 set synmaxcol=1024      " Don't do syntax colouring for long lines
+
+""" Directories
+if exists("+persistent_undo")
+   set undodir="~/.local/vim/undo/"
+endif
+
+" Stop spamming me with cruft
+set nobackup
+set nowritebackup
+set noswapfile
 
 """ Key remaps
 " Use space as leader
@@ -131,7 +151,6 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 
-
 "===============================================================================
 "" Plugin Settings
 "===============================================================================
@@ -151,6 +170,13 @@ set laststatus=2
 inoremap <C-e> <esc>:NERDTreeToggle<CR>
 nnoremap <C-e> :NERDTreeToggle<CR>
 let NerdTreeIgnore=['\.py[cd]$','\~$']
+
+
+"===============================================================================
+"" Filetype settings
+"===============================================================================
+autocmd FileType vim
+    \ iabbrev cl "===============================================================================
 
 "===============================================================================
 "" External stuff

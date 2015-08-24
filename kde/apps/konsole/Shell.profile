@@ -8,3 +8,7 @@ Command=/bin/zsh
 Environment=TERM=xterm-256color
 Name=Shell
 Parent=FALLBACK/
+
+[Scrolling]
+HistoryMode=1
+ScrollBarPosition=1
