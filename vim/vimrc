@@ -37,7 +37,7 @@ Plug 'tpope/vim-sensible'
 " Plug 'SirVer/ultisnips'
 
 " Comments
-" Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 " File browsing
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
