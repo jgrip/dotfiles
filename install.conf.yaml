@@ -10,7 +10,3 @@
       ~/.vim: vim/vim
       ~/.vimrc: vim/vimrc
       ~/.zshrc: zshrc
-      ~/.Xresources: Xresources
-      ~/.kde/share/apps/konsole/Shell.profile:
-       create: true
-       path: kde/apps/konsole/Shell.profile

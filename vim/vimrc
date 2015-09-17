@@ -59,7 +59,10 @@ Plug 'edkolev/promptline.vim'
 Plug 'edkolev/tmuxline.vim'
 
 " Colour schemes
-Plug 'altercation/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
+"Plug 'freeo/vim-kalisi'
+"Plug 'tomasr/molokai'
 
 " Misc
 Plug 'christoomey/vim-tmux-navigator'
@@ -75,7 +78,8 @@ call plug#end()
 """ Colour scheme
 set background=dark
 try
-  colorscheme solarized
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  colorscheme gruvbox
 catch
 endtry
 
