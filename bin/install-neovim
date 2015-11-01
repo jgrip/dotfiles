@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir -p ~/Soft/
+cd ~/Soft/
+git clone https://github.com/neovim/neovim.git
+sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
+cd ~/Soft/neovim/
+make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX:PATH=$HOME/.local/neovim"
+make install
+ln -s ~/.local/neovim/bin/nvim ~/.local/bin

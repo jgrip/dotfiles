@@ -24,6 +24,9 @@ git submodule update --init --recursive github
 echo "** Creating folders"
 
 mkdir -p ~/.local/vim/undo/
+mkdir -p ~/.local/bin/
+mkdir -p ~/.local/neovim/
+mkdir -p ~/Soft/
 
 echo "** Installing vim plugins"
 

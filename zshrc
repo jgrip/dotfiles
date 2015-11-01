@@ -36,9 +36,7 @@ else
 fi
 
 # Bootstrap path
-export PATH=~/dotfiles/bin:${PATH}
-
-[ -d ~/bin ] && export PATH=~/bin:${PATH}
+export PATH=~/.local/bin:~/dotfiles/bin:${PATH}
 
 # Debian settings
 export DEBEMAIL=ogun@ogun.org
@@ -54,6 +52,9 @@ export MC_SKIN=~/dotfiles/github/mc-solarized-skin/solarized.ini
 # Aliases
 alias gfo='git fetch origin'
 alias gmom='git merge origin/master'
+
+# If we have neovim, use it
+[ -f ~/.local/bin/nvim ] && alias vim=nvim
 
 # Load local settings
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
