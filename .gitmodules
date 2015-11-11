@@ -1,9 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "fonts"]
-	path = github/powerline-fonts
-	url = https://github.com/powerline/fonts
 [submodule "github/vim-commentary"]
 	path = github/vim-commentary
 	url = https://github.com/tpope/vim-commentary
@@ -16,3 +13,6 @@
 [submodule "github/mc-solarized-skin"]
 	path = github/mc-solarized-skin
 	url = https://github.com/pavlo/mc-solarized-skin.git
+[submodule "github/powerline-fonts"]
+	path = github/powerline-fonts
+	url = https://github.com/powerline/fonts
