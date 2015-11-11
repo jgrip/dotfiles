@@ -4,7 +4,6 @@
       - "~"
 -
   link:
-      ~/.fonts: github/powerline-fonts
       ~/.gitconfig: gitconfig
       ~/.tmux.conf: tmux.conf
       ~/.config/nvim: nvim
