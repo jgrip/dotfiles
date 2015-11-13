@@ -2,9 +2,9 @@
 "" Settings
 "===============================================================================
 
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set t_Co=256
+"let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"set t_Co=256
 
 """ Basics
 set shortmess+=aoOtT	" Clean up messages
@@ -168,3 +168,11 @@ let g:tmuxline_theme = 'airline'
 
 """ promptline config
 let g:promptline_theme = 'airline'
+let g:promptline_preset = {
+        \'a' : [ promptline#slices#host() ],
+        \'b' : [ promptline#slices#user() ],
+        \'c' : [ promptline#slices#cwd() ],
+        \'x' : [ promptline#slices#python_virtualenv() ],
+        \'y' : [ promptline#slices#vcs_branch() ],
+        \'warn' : [ promptline#slices#last_exit_code() ]}
+
