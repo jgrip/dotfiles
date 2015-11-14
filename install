@@ -26,6 +26,7 @@ echo "** Creating folders"
 mkdir -p ~/.local/vim/undo/
 mkdir -p ~/.local/bin/
 mkdir -p ~/.local/neovim/
+mkdir -p ~/.local/venv/
 mkdir -p ~/Soft/
 
 echo "** Installing vim plugins"
