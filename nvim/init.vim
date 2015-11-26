@@ -112,12 +112,14 @@ call plug#begin('~/.vim/plugged')
 " Plug 'SirVer/ultisnips'
 
 " Comments
-Plug 'scrooloose/nerdcommenter'
+" Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 
 " File browsing
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " File types
+Plug 'sheerun/vim-polyglot'
 
 " Python
 Plug 'davidhalter/jedi-vim'
@@ -142,6 +144,7 @@ Plug 'morhetz/gruvbox'
 
 " Misc
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'Yggdroot/indentline'
 
 "" End of plugin section
 call plug#end()
