@@ -8,7 +8,7 @@ if ! zgen saved; then
 
 	#Plugins
 	#zgen oh-my-zsh plugins/git
-	#zgen oh-my-zsh plugins/sudo
+	zgen oh-my-zsh plugins/sudo
 	#zgen oh-my-zsh plugins/command-not-found
 
 	#Completions
@@ -17,6 +17,9 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-syntax-highlighting
 
 	#Themes
+
+    # Miscellaneous
+    zgen load marzocchi/zsh-notify
 
 	#Save 
 	zgen save

@@ -104,6 +104,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 " Plug 'vim-scripts/AutoComplPop'
 " Plug 'wellle/tmux-complete.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Snippets
 " Plug 'honza/vim-snippets'
@@ -116,13 +117,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
 
 " File browsing
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+"Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " File types
 Plug 'sheerun/vim-polyglot'
+Plug 'w0rp/ale'
 
 " Python
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
 Plug 'hynek/vim-python-pep8-indent'
 
 " Git
@@ -130,6 +132,7 @@ Plug 'hynek/vim-python-pep8-indent'
 " Motions
 
 " Text objects
+Plug 'tpope/vim-surround'
 
 " Status lines
 Plug 'bling/vim-airline'
@@ -179,3 +182,10 @@ let g:promptline_preset = {
         \'y' : [ promptline#slices#vcs_branch() ],
         \'warn' : [ promptline#slices#last_exit_code() ]}
 
+""" ALE
+let g:ale_linters = {
+\   'python': ['pycodestyle'],
+\}
+
+""" Deoplete
+let g:deoplete#enable_at_startup = 1
