@@ -128,6 +128,7 @@ Plug 'w0rp/ale'
 Plug 'hynek/vim-python-pep8-indent'
 
 " Git
+Plug 'airblade/vim-gitgutter'
 
 " Motions
 
