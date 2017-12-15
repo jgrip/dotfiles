@@ -4,14 +4,15 @@ source ~/dotfiles/github/zgen/zgen.zsh
 if ! zgen saved; then
 	echo "Creating zgen save"
 
-	zgen oh-my-zsh
+	zgen prezto
 
 	#Plugins
 	#zgen oh-my-zsh plugins/git
-	zgen oh-my-zsh plugins/sudo
+	#zgen oh-my-zsh plugins/sudo
 	#zgen oh-my-zsh plugins/command-not-found
 
 	#Completions
+    zgen load zsh-users/zsh-autosuggestions
     
     #Highlight and suggestions
     zgen load zsh-users/zsh-syntax-highlighting
@@ -20,6 +21,8 @@ if ! zgen saved; then
 
     # Miscellaneous
     zgen load marzocchi/zsh-notify
+    zgen load psprint/zsh-navigation-tools
+    zgen load psprint/zsh-cmd-architect
 
 	#Save 
 	zgen save
