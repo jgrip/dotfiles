@@ -41,8 +41,11 @@ else
     source ~/dotfiles/zsh/promptline-snapshot
 fi
 
+# Pyenv
+export PYENV_ROOT="$HOME/dotfiles/pyenv"
+
 # Bootstrap path
-export PATH=~/.local/bin:~/dotfiles/bin:${PATH}
+export PATH=~/.local/bin:~/dotfiles/bin:$PYENV_ROOT/bin:${PATH}
 
 # Debian settings
 export DEBEMAIL=ogun@ogun.org
@@ -58,6 +61,9 @@ export MC_SKIN=~/dotfiles/github/mc-solarized-skin/solarized.ini
 # Aliases
 alias gfo='git fetch origin'
 alias gmom='git merge origin/master'
+
+# Pyenv autocompletion
+eval "$(pyenv init -)"
 
 # If we have neovim, use it
 [ -f ~/.local/bin/nvim ] && alias vim=nvim

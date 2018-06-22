@@ -1,3 +1,5 @@
 [user]
 	email = ogun@ogun.org
 	name = Johan Grip
+[url "https://salsa.debian.org/installer-team/"]
+	insteadOf = git@salsa.debian.org:installer-team/

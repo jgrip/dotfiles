@@ -16,3 +16,6 @@
 [submodule "github/powerline-fonts"]
 	path = github/powerline-fonts
 	url = https://github.com/powerline/fonts
+[submodule "pyenv"]
+	path = pyenv
+	url = https://github.com/pyenv/pyenv.git
