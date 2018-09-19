@@ -13,9 +13,6 @@
 [submodule "github/mc-solarized-skin"]
 	path = github/mc-solarized-skin
 	url = https://github.com/pavlo/mc-solarized-skin.git
-[submodule "github/powerline-fonts"]
-	path = github/powerline-fonts
-	url = https://github.com/powerline/fonts
 [submodule "pyenv"]
 	path = pyenv
 	url = https://github.com/pyenv/pyenv.git

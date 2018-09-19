@@ -32,6 +32,3 @@ mkdir -p ~/Soft/
 echo "** Installing vim plugins"
 
 vim -c PlugInstall -c exit -c exit
-
-echo "** Install fonts"
-~/dotfiles/github/powerline-fonts/install.sh
