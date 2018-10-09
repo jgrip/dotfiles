@@ -1,0 +1,7 @@
+{
+    "python.formatting.blackPath": "~/.local/bin/black",
+    "python.formatting.provider": "black",
+    "python.linting.flake8Path": "~/.local/bin/flake8",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true
+}

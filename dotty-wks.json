@@ -1,6 +1,7 @@
 {
 	"directories": [
 		"~/.local/bin",
+		"~/.config/Code",
 		"~/.gnupg"
 	],
 
@@ -10,7 +11,8 @@
 		"nvim": "~/.config/nvim",
 		"zshrc": "~/.zshrc",
 		"gnupg/gpg.conf": "~/.gnupg/gpg.conf",
-		"gnupg/gpg-agent.conf": "~/.gnupg/gpg-agent.conf"
+		"gnupg/gpg-agent.conf": "~/.gnupg/gpg-agent.conf",
+		"Code/User": "~/.config/Code/User"
 	},
 
 	"install_cmd": "sudo apt install -y",
