@@ -41,8 +41,13 @@ else
     source ~/dotfiles/zsh/promptline-snapshot
 fi
 
+# Yubi SSH
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+gpg-connect-agent updatestartuptty /bye
+
 # Pyenv
-export PYENV_ROOT="$HOME/dotfiles/pyenv"
+export PYENV_ROOT="$HOME/dotfiles/github/pyenv"
 
 # Bootstrap path
 export PATH=~/.local/bin:~/dotfiles/bin:$PYENV_ROOT/bin:${PATH}
@@ -64,9 +69,6 @@ alias gmom='git merge origin/master'
 
 # Pyenv autocompletion
 eval "$(pyenv init -)"
-
-# If we have neovim, use it
-[ -f ~/.local/bin/nvim ] && alias vim=nvim
 
 # Load local settings
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

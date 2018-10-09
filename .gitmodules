@@ -1,6 +1,3 @@
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
 [submodule "github/vim-commentary"]
 	path = github/vim-commentary
 	url = https://github.com/tpope/vim-commentary
@@ -14,5 +11,5 @@
 	path = github/mc-solarized-skin
 	url = https://github.com/pavlo/mc-solarized-skin.git
 [submodule "pyenv"]
-	path = pyenv
+	path = github/pyenv
 	url = https://github.com/pyenv/pyenv.git

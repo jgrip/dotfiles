@@ -1,0 +1,50 @@
+{
+	"directories": [
+		"~/.local/bin",
+		"~/.gnupg"
+	],
+
+	"link": {
+		"gitconfig": "~/.gitconfig",
+		"tmux.conf": "~/.tmux.conf",
+		"nvim": "~/.config/nvim",
+		"zshrc": "~/.zshrc",
+		"gnupg/gpg.conf": "~/.gnupg/gpg.conf",
+		"gnupg/gpg-agent.conf": "~/.gnupg/gpg-agent.conf"
+	},
+
+	"install_cmd": "sudo apt install -y",
+	"install": [
+		"python",
+		"python3",
+		"python-pip",
+		"python3-pip",
+		"neovim",
+		"zsh",
+		"fonts-powerline",
+		"scdaemon",
+		"dirmngr",
+		"make",
+		"build-essential",
+		"libssl-dev",
+		"zlib1g-dev",
+		"libbz2-dev",
+		"libreadline-dev",
+		"libsqlite3-dev",
+		"wget",
+		"curl",
+		"llvm",
+		"libncurses5-dev",
+		"xz-utils",
+		"tk-dev",
+		"libxml2-dev",
+		"libxmlsec1-dev",
+		"libffi-dev"
+	],
+
+	"commands": [
+		"pip install --user neovim",
+		"pip3 install --user neovim pipenv",
+		"nvim -c PlugInstall -c exit -c exit"
+	]
+}

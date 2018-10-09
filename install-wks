@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+sudo apt install python3
+
+git submodule update --init --recursive github
+
+python3 bin/dotty.py dotty-wks.json
